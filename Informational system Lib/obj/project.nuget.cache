@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "p4UxktdhwMSoxU+0WvehkgF7wV5hs0GgjJ9SqiG+SNvCPRU3MmWlbLNnlTXJ06dGn1/I6OL1GLuoU6QhFyN5/w==",
+  "dgSpecHash": "+nShGl07TTgT8ewwxxYlcU3XjaXHfn8J623jU8Yl4/9alvohmlAtAvgKmiEBT5/QodzORTGRgtpboQB5Oz48kA==",
   "success": true,
-  "projectFilePath": "D:\\IT kariera kursove i (proekti)\\IT kariera(Kurs) Projects\\Informational-system-Lib\\Informational system Lib\\Informational system Lib.csproj",
+  "projectFilePath": "D:\\IT kariera(Kurs) Projects\\Informational-system-Lib\\Informational system Lib\\Informational system Lib.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Stefan\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Stefan\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\IT kariera kursove i (proekti)\\IT kariera(Kurs) Projects\\Informational-system-Lib\\Informational system Lib\\Informational system Lib.csproj": {}
+    "D:\\IT kariera(Kurs) Projects\\Informational-system-Lib\\Informational system Lib\\Informational system Lib.csproj": {}
   },
   "projects": {
-    "D:\\IT kariera kursove i (proekti)\\IT kariera(Kurs) Projects\\Informational-system-Lib\\Informational system Lib\\Informational system Lib.csproj": {
+    "D:\\IT kariera(Kurs) Projects\\Informational-system-Lib\\Informational system Lib\\Informational system Lib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\IT kariera kursove i (proekti)\\IT kariera(Kurs) Projects\\Informational-system-Lib\\Informational system Lib\\Informational system Lib.csproj",
+        "projectUniqueName": "D:\\IT kariera(Kurs) Projects\\Informational-system-Lib\\Informational system Lib\\Informational system Lib.csproj",
         "projectName": "Informational system Lib",
-        "projectPath": "D:\\IT kariera kursove i (proekti)\\IT kariera(Kurs) Projects\\Informational-system-Lib\\Informational system Lib\\Informational system Lib.csproj",
+        "projectPath": "D:\\IT kariera(Kurs) Projects\\Informational-system-Lib\\Informational system Lib\\Informational system Lib.csproj",
         "packagesPath": "C:\\Users\\Stefan\\.nuget\\packages\\",
-        "outputPath": "D:\\IT kariera kursove i (proekti)\\IT kariera(Kurs) Projects\\Informational-system-Lib\\Informational system Lib\\obj\\",
+        "outputPath": "D:\\IT kariera(Kurs) Projects\\Informational-system-Lib\\Informational system Lib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Stefan\\AppData\\Roaming\\NuGet\\NuGet.Config",
