@@ -1,0 +1,75 @@
+﻿@model Informational_system_Lib.Models.Customer
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Изтриване</h1>
+
+<h3>Наистина ли искате да изтриете това?</h3>
+<div>
+    @*<h4>Customer</h4>*@
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Първо име
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class = "col-sm-2">
+            Бащино име
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SecondName)
+        </dd>
+        <dt class = "col-sm-2">
+            Фамилия
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.ThirdName)
+        </dd>
+        <dt class = "col-sm-2">
+            Адрес
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Addres)
+        </dd>
+        <dt class = "col-sm-2">
+            Телефонен номер
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+        <dt class = "col-sm-2">
+            ЕГН
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EGN)
+        </dd>
+        <dt class = "col-sm-2">
+            Име на взета книга
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NameOfBook)
+        </dd>
+        <dt class = "col-sm-2">
+            Дата на запис
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateOfRecord)
+        </dd>
+        <dt class = "col-sm-2">
+            Дата на оптисване
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DateOfDeregistration)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="id" />
+        <input type="submit" value="Изтрий" class="btn btn-danger" /> |
+        <a asp-action="Index">Назад</a>
+    </form>
+</div>

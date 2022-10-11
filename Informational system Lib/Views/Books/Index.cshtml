@@ -1,0 +1,84 @@
+﻿@model IEnumerable<Informational_system_Lib.Models.Book>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<header style="background-color:lightgoldenrodyellow">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container" style="background-color:lightgoldenrodyellow">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Към вход</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="HomePage2">Начало</a>
+                    </li>
+                    <li class="nav-item">
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<a href="/Home/HomePage2">Към главното меню</a>
+
+<h1>Книги</h1>
+
+<p>
+    <a asp-action="Create">Добави нова</a>
+</p>
+<form method="get" asp-action="Index">
+    <p>
+        <input type="search" placeholder="Въведи име на книга или автор..." value="@ViewData["Getbooksdetails"]" name="BooksSearch" style="width:500px;" />
+        <input type="submit" value="Търсене" class="btn btn-primary" />
+        <a asp-action="Index">Показване на всички</a>
+    </p>
+
+</form>
+<table class="table" style="border-color:black">
+    <thead style="border-color:black">
+        <tr style="border-color:black">
+            <th>
+                Заглавие
+            </th>
+            <th>
+                Автор
+            </th>
+            <th>
+                Жанр
+            </th>
+            <th>               
+                Количество
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Zaglavie)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Avtor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Janr)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kolichestvo)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.IdBook">Редактиране</a> |
+                    <a asp-action="Details" asp-route-id="@item.IdBook">Детайли</a> |
+                    <a asp-action="Delete" asp-route-id="@item.IdBook">Изтриване</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

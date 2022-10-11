@@ -1,0 +1,112 @@
+﻿@model IEnumerable<Informational_system_Lib.Models.Customer>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<header style="background-color:lightgoldenrodyellow">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <div class="container" style="background-color:lightgoldenrodyellow">
+            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Към вход</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="HomePage2">Начало</a>
+                    </li>
+                    <li class="nav-item">
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<a href="/Home/HomePage2">Към главното меню</a>
+
+<h1>Клиенти</h1>
+ 
+<p>
+    <a asp-action="Create">Добави нов</a>
+</p>
+<form method="get" asp-action="Index">
+    <p>
+        <input type="search" placeholder="Въведете ЕГН на потребителя..." value="@ViewData["Getcustomersdetails"]" name="CustomerSearch" style="width:500px;" />
+        <input type="submit" value="Търсене" class="btn btn-primary" />
+        <a asp-action="Index">Върни всички клиенти</a>
+    </p>
+
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Първо име
+            </th>
+            <th>
+                Бащино име
+            </th>
+            <th>
+                Фамилия
+            </th>
+            <th>
+                Адрес
+            </th>
+            <th>
+                Телефонен номер
+            </th>
+            <th>
+                ЕГН
+            </th>
+            <th>
+                Име на взета книга
+            </th>
+            <th>
+                Дата на запис
+            </th>
+            <th>
+                Дата на отписване
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SecondName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ThirdName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Addres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EGN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameOfBook)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfRecord)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfDeregistration)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Редактиране</a> 
+                <a asp-action="Details" asp-route-id="@item.id">Детайли</a> 
+                <a asp-action="Delete" asp-route-id="@item.id">Изтриване</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

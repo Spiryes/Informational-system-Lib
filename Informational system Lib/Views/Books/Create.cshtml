@@ -1,0 +1,47 @@
+﻿@model Informational_system_Lib.Models.Book
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Добавяне на нова книга</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Zaglavie" class="control-label">Заглавие</label>
+                <input asp-for="Zaglavie" class="form-control" />
+                <span asp-validation-for="Zaglavie" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Avtor" class="control-label">Автор</label>
+                <input asp-for="Avtor" class="form-control" />
+                <span asp-validation-for="Avtor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Janr" class="control-label">Жанр</label>
+                <input asp-for="Janr" class="form-control" />
+                <span asp-validation-for="Janr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Kolichestvo" class="control-label">Количество</label>
+                <input asp-for="Kolichestvo" class="form-control" />
+                <span asp-validation-for="Kolichestvo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Създай" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Назад</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

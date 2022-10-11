@@ -1,0 +1,45 @@
+﻿@model Informational_system_Lib.Models.Book
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Изтриване</h1>
+
+<h3>Наистина ли искате да изтриете това?</h3>
+<div>
+    @*<h4>Book</h4>*@
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+           Заглавие
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Zaglavie)
+        </dd>
+        <dt class = "col-sm-2">
+            Автор
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Avtor)
+        </dd>
+        <dt class = "col-sm-2">
+            Жанр
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Janr)
+        </dd>
+        <dt class = "col-sm-2">
+            Количество
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Kolichestvo)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="IdBook" />
+        <input type="submit" value="Изтрий" class="btn btn-danger" /> |
+        <a asp-action="Index">Назад</a>
+    </form>
+</div>
